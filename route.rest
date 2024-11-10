@@ -1,0 +1,30 @@
+GET http://localhost:3000/api/tareas
+
+### 
+
+GET http://localhost:3000/api/tareas/6730ea4f216d9db51763e560
+
+### 
+
+POST http://localhost:3000/api/tareas
+Content-Type: application/json
+
+{
+    "titulo": "Dormir",
+    "descripcion": "DormirMucho",
+    "fechaFin": "",
+    "completada": true
+}
+
+### 
+
+DELETE http://localhost:3000/api/tareas/6730e98d079137a2d4519d2a
+
+### 
+
+PATCH http://localhost:3000/api/tareas/6730ea4f216d9db51763e560
+Content-Type: application/json
+
+{
+    "titulo": "soñar"
+}

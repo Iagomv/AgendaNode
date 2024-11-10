@@ -1,0 +1,159 @@
+/* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fa; /* Suave color de fondo */
+    color: #333; /* Color de texto */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container Styling */
+.container {
+    max-width: 1200px; /* Máxima anchura */
+    margin: 0 auto; /* Centramos el contenido */
+}
+
+/* Heading Styling */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin-top: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.3s ease; /* Transición suave */
+}
+
+h1:hover {
+    color: #3498db; /* Cambio de color al pasar el mouse */
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    margin-top: 20px;
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 8px;
+    overflow: hidden; /* Redondear las esquinas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: transform 0.3s ease; /* Animación al pasar mouse */
+}
+
+table:hover {
+    transform: scale(1.02); /* Aumento al pasar mouse */
+}
+
+/* Table Header Styling */
+th {
+    background-color: #f9fafb;
+    color: #2c3e50;
+    font-weight: 500;
+    text-align: left;
+    padding: 15px;
+    font-size: 1rem;
+}
+
+th:hover {
+    background-color: #e1e9f0; /* Cambio de color al pasar mouse */
+}
+
+/* Table Body Styling */
+td {
+    padding: 15px;
+    text-align: left;
+    color: #555;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+td:hover {
+    background-color: #f0f2f5; /* Color de fondo al pasar el mouse */
+}
+
+/* Button Styling */
+button {
+    background-color: #3498db;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Form Styling */
+form {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+form:hover {
+    transform: translateY(-5px); /* Animación de elevación al pasar mouse */
+}
+
+/* Form Input Fields */
+input[type="text"], input[type="date"], .form-check-input {
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 1rem;
+    width: 100%;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="date"]:focus {
+    border-color: #3498db; /* Borde azul al hacer foco */
+    outline: none;
+}
+
+/* Checkbox Styling */
+.form-check-label {
+    font-size: 1rem;
+    color: #333;
+    font-weight: 400;
+}
+
+/* Footer Styling (optional) */
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #f9fafb;
+    color: #888;
+    font-size: 0.9rem;
+    border-top: 1px solid #e1e9f0;
+    margin-top: 30px;
+}
+
+/* Animation for Table Rows */
+@keyframes fadeInRow {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+tbody tr {
+    animation: fadeInRow 0.6s ease forwards;
+}
+
+tbody tr:nth-child(even) {
+    animation-delay: 0.3s;
+}
+
+tbody tr:nth-child(odd) {
+    animation-delay: 0.5s;
+}
