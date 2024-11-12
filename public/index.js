@@ -16,7 +16,7 @@ async function cargarTareas() {
             // Titulo
             const tdTitulo = document.createElement('td');
             tdTitulo.textContent = tarea.titulo;
-            tdTitulo.className ="ps-3"
+            tdTitulo.className ="ps-3 fw-bold"
             tdTitulo.contentEditable = true;
             tdTitulo.addEventListener('blur', () => actualizarTarea(tarea._id, 'titulo', tdTitulo.textContent));
 
@@ -69,6 +69,7 @@ async function cargarTareas() {
             tr.appendChild(tdBtnEliminar);
             tr.classList = tarea.completada ? "opacity-50" : "opacity-100"
             // Añadir la fila a la tabla
+            tr.style.backgroundColor = seleccionarColor(tarea.titulo);
             tableBody.appendChild(tr);
         });
     } catch (error) {
@@ -152,14 +153,52 @@ async function eliminarTarea(id){
             throw new Error("No se pudo actualizar la tarea");
         }
 
-        cargarTareasa()
 
     } catch (error) {
         console.log("Error al actualizar la tarea:", {message: message.error});
         alert("Error al eliminar la tarea, Por favor, inténtalo de nuevo.");
     }
+    cargarTareas()
+
 }
 
-
+// Función para seleccionar el color de fondo según el título de la tarea
+function seleccionarColor(titulo) {
+    let color = "";
+    switch (titulo.toLowerCase()) {
+        case "interfaces":
+        case "german":
+            color = "rgba(167, 92, 192, 0.10)";
+            break;
+        case "empresa":
+        case "empresas":    
+        case "rocio":
+            color = "rgba(167, 92, 35, 0.10)";
+            break;
+        case "acceso a datos":
+        case "acceso datos":
+        case "acceso":
+        case "datos":
+            color = "rgba(0, 40, 145, 0.10)";
+            break;
+        case "lucia":
+        case "marcas":
+        case "html":
+        case "gestion de empresas":
+        case "erp":
+            color = "rgba(255, 0, 0, 0.10)";
+            break;
+        case "procesos":
+        case "moncho":
+        case "process":
+        case "hilos":
+            color = "rgba(0, 255, 255, 0.10)";
+            break;
+        default:
+            color = "#ffffff"; // Color predeterminado
+            break;
+    }
+    return color;
+}
 // Cargar las tareas al recargar la pagina
 document.addEventListener('DOMContentLoaded', cargarTareas);

@@ -9,9 +9,12 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
     "express": "^4.21.1",
-    "mongoose": "^8.8.1"
+    "icons": "^1.0.0",
+    "mongoose": "^8.8.1",
+    "restapi": "file:"
   },
   "devDependencies": {
     "dotenv": "^16.4.5",
